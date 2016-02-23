@@ -34,7 +34,8 @@
     "react-redux": "~4.4.0",
     "redux": "~3.3.1",
     "serve-favicon": "~2.3.0",
-    "standard": "~6.0.5"
+    "standard": "~6.0.5",
+    "webpack": "~1.12.13"
   },
   "devDependencies": {
     "babel-core": "^6.5.2",
@@ -47,8 +48,7 @@
     "karma-chrome-launcher": "^0.2.2",
     "karma-jasmine": "^0.3.7",
     "karma-requirejs": "^0.2.5",
-    "requirejs": "~2.1.22",
-    "webpack": "~1.12.13"
+    "requirejs": "~2.1.22"
   },
   "engines": {
     "node": "~5.6.0",
