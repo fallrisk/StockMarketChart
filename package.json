@@ -9,7 +9,7 @@
     "build": "webpack",
     "start": "node ./bin/www",
     "preinstall": "",
-    "postinstall": "webpack -p --config webpack.prod.config.js --profile --progress --colors",
+    "postinstall": "webpack -p --config webpack.dev.config.js --profile --progress --colors",
     "devbuild": "webpack --config webpack.dev.config.js --progress --colors",
     "test": "jest"
   },
