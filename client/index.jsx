@@ -1,23 +1,27 @@
 import 'babel-polyfill'
-var React = require('react')
-var ReactDOM = require('react-dom')
+import React from 'react'
+import { render } from 'react-dom'
+import { Provider } from 'react-redux'
 import { createStore } from 'redux'
-import Counter from './components/Counter'
-import counter from './reducers'
+import stockApp from './reducers'
+import App from './components/App'
 
-const store = createStore(counter)
-const rootEl = document.getElementById('root')
+const sampleStocks = [
+  {id: 1, name: 'Amazon Inc.', abbr: 'AMZN'},
+  {id: 2, name: 'Google Inc.', abbr: 'GOOG'},
+  {id: 3, name: 'First Solar Inc.', abbr: 'FSLR'},
+  {id: 4, name: 'Apple', abbr: 'AAPL'}
+]
 
-function render () {
-  ReactDOM.render(
-    <Counter
-      value={store.getState()}
-      onIncrement={() => store.dispatch({ type: 'INCREMENT' })}
-      onDecrement={() => store.dispatch({ type: 'DECREMENT' })}
-    />,
-    rootEl
-  )
+const initialState = {
+  stocks: sampleStocks
 }
 
-render()
-store.subscribe(render)
+let store = createStore(stockApp, initialState)
+
+render (
+  <Provider store={store}>
+    <App />
+  </Provider>,
+    document.getElementById('root')
+)
