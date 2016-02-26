@@ -10,3 +10,17 @@ export const addStock = (abbr) => {
     abbr
   }
 }
+
+export const removeStock = (id) => {
+  return {
+    type: 'REMOVE_STOCK',
+    id
+  }
+}
+
+export const changeStockColor = (id) => {
+  return {
+    type: 'CHANGE_STOCK_COLOR',
+    id
+  }
+}

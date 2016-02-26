@@ -7,10 +7,10 @@ import stockApp from './reducers'
 import App from './components/App'
 
 const sampleStocks = [
-  {id: 1, name: 'Amazon Inc.', abbr: 'AMZN'},
-  {id: 2, name: 'Google Inc.', abbr: 'GOOG'},
-  {id: 3, name: 'First Solar Inc.', abbr: 'FSLR'},
-  {id: 4, name: 'Apple', abbr: 'AAPL'}
+  {id: 1, name: 'Amazon Inc.', abbr: 'AMZN', color: 'mdl-color--amber-400'},
+  {id: 2, name: 'Google Inc.', abbr: 'GOOG', color: 'mdl-color--purple-400'},
+  {id: 3, name: 'First Solar Inc.', abbr: 'FSLR', color: 'mdl-color--green-400'},
+  {id: 4, name: 'Apple', abbr: 'AAPL', color: 'mdl-color--blue-400'}
 ]
 
 const initialState = {

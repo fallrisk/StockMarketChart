@@ -4,7 +4,8 @@
 
 import { connect } from 'react-redux'
 
-import StockListComponent from '../components/StockList'
+import { default as StockListComponent } from '../components/StockList'
+import { removeStock } from '../actions'
 
 const mapStateToProps = (state) => {
   return {
@@ -15,7 +16,14 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     onStockClick: (id) => {
-      console.log('test')
+      console.log('Stock clicked for id: ' + id)
+      // dispatch(removeStock(id))
+    },
+    onStockRemoveClick: (id) => {
+      console.log('Remove clicked for id: ' + id)
+    },
+    onStockColorClick: (id) => {
+      console.log('Color clicked for id: ' + id)
     }
   }
 }
