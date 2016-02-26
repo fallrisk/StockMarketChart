@@ -2,7 +2,7 @@
  * Created by Justin on 2016-02-24.
  */
 
-let nextStockId = 0
+let nextStockId = 5
 export const addStock = (abbr) => {
   return {
     type: 'ADD_STOCK',

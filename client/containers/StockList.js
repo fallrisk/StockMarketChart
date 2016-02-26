@@ -16,11 +16,11 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     onStockClick: (id) => {
-      console.log('Stock clicked for id: ' + id)
-      // dispatch(removeStock(id))
+      console.log('Stock clicked: ' + id)
     },
     onStockRemoveClick: (id) => {
       console.log('Remove clicked for id: ' + id)
+      dispatch(removeStock(id))
     },
     onStockColorClick: (id) => {
       console.log('Color clicked for id: ' + id)
