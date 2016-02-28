@@ -6,7 +6,7 @@ import React from 'react'
 
 import StockViewer from '../components/StockViewer.jsx'
 import AddStockButton from '../containers/AddStock'
-import AddStockDialog from '../components/AddStockDialog'
+import AddStockDialog from '../containers/AddStockDialog'
 
 var onAddStockClick = () => {
   console.log('Adding a stock.')
@@ -19,7 +19,8 @@ const App = () => (
         <span className='mdl-layout-title'>Stock Chart</span>
         <div className='mdl-layout-spacer'></div>
       </div>
-      <AddStockButton onClick={onAddStockClick} />
+      <AddStockButton />
+      <AddStockDialog />
     </header>
     <div className='mdl-layout__drawer'>
       <nav className='mdl-navigation'>
