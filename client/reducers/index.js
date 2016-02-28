@@ -24,16 +24,9 @@ const stocks = (state = [], action) => {
         stock(undefined, action)
       ]
     case 'REMOVE_STOCK':
-      let index = -1
-      for (var i = 0; i < state; i++) {
-        if (state[i].id === action.id) {
-          index = i
-          break
-        }
-      }
-      return [
-        ...state.slice(0, index)
-      ]
+      return state.filter((v) => {
+        return !(v.id === action.id)
+      })
     default:
       return state
   }
