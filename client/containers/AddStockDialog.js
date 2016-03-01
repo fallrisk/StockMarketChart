@@ -6,6 +6,7 @@ import { connect } from 'react-redux'
 
 import { default as AddStockDialogComponent } from '../components/AddStockDialog'
 import { addStock } from '../actions'
+import { getRandomColor } from '../MaterialColors'
 
 const mapStateToProps = (state) => {
   return {
@@ -15,8 +16,8 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     onAddClick: (abbr) => {
-      console.log('Add clicked: ' + abbr)
-      dispatch(addStock(abbr))
+      // console.log('Add clicked: ' + abbr)
+      dispatch(addStock(abbr, '', getRandomColor('400')))
     }
   }
 }

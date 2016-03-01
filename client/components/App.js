@@ -8,10 +8,6 @@ import StockViewer from '../components/StockViewer.jsx'
 import AddStockButton from '../containers/AddStock'
 import AddStockDialog from '../containers/AddStockDialog'
 
-var onAddStockClick = () => {
-  console.log('Adding a stock.')
-}
-
 const App = () => (
   <div className='mdl-layout mdl-js-layout mdl-layout--fixed-header'>
     <header className='mdl-layout__header'>

@@ -9,7 +9,9 @@ const stock = (state, action) => {
     case 'ADD_STOCK':
       return {
         id: action.id,
-        abbr: action.abbr
+        abbr: action.abbr,
+        name: action.name,
+        color: action.color
       }
     default:
       return state
